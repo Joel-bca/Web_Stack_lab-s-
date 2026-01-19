@@ -1,0 +1,177 @@
+/* Parallax base */
+.parallax {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Overlay */
+.parallax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Parallax content */
+.parallax .content {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  text-align: center;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+.section{
+  color: rgb(0, 0, 0);
+}
+
+/* Hero */
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+}
+
+.facilities {
+  background-image: url("https://images.unsplash.com/photo-1492496913980-501348b61469");
+}
+
+/* Mission section */
+.mission-section {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.mission-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #1f3d2b;
+}
+
+.mission-content p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #3b5f4a;
+}
+
+/* Highlights */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-number {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.achievement-label {
+  font-size: 0.9rem;
+  color: #555;
+  text-transform: uppercase;
+}
+
+/* Features section */
+.sports-section {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.sports-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #1f3d2b;
+}
+
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sport-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sport-image {
+  height: 200px;
+}
+
+.sport-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sport-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sport-content {
+  padding: 1.5rem;
+}
+
+/* Values */
+.values-section {
+  padding: 4rem 2rem;
+  background-color: #f4f8f4;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
