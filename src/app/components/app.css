@@ -1,0 +1,92 @@
+.back_plate {
+  background-image: url("https://github.com/Joel-bca/dpe_assests_RR/00d556820cf4314271baca53b8889c38fae799e3/people-taking-care-plants-hand-drawn_23-2148978452.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+}
+
+.parallax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.parallax .content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+}
+
+.welcome-message {
+  max-width: 900px;
+  text-align: center;
+}
+
+.parallax {
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.parallax {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Hero background */
+.hero {
+  background-image: url("https://dpe-byc-assets.s3.eu-north-1.amazonaws.com/campus.jpg");
+}
+
+/* Second parallax bg */
+.facilities {
+  background-image: url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d");
+}
+
+.section.normal {
+  height: 100vh;
+  background-image: url("https://raw.githubusercontent.com/Joel-bca/dpe_assests_RR/e529483f226cf9034bc6e30cc1cedb7a9953b08c/cu_bg.png");
+  background-size: cover;
+  height: 10px;
+  padding: 4rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+

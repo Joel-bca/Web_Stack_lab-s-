@@ -1,0 +1,70 @@
+<div class="container mt-4">
+
+  <h3>DPE Event Registration</h3>
+
+  <form [formGroup]="registerForm" (ngSubmit)="submit()" class="card p-3 mb-4">
+
+    <input type="text"
+           formControlName="name"
+           placeholder="Student Name"
+           class="form-control mb-2">
+
+    <input type="text"
+           formControlName="regNo"
+           placeholder="Register Number"
+           class="form-control mb-2">
+
+    <input type="text"
+           formControlName="department"
+           placeholder="Department"
+           class="form-control mb-2">
+
+    <select formControlName="event"
+            class="form-control mb-2">
+      <option value="">Select Event</option>
+      <option>Football Tournament</option>
+      <option>Basketball League</option>
+      <option>Chess Championship</option>
+    </select>
+
+    <button type="submit" class="btn btn-primary">
+      {{ editId ? 'Update Registration' : 'Register' }}
+    </button>
+
+  </form>
+
+  <h4>Registered Students</h4>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Reg No</th>
+        <th>Department</th>
+        <th>Event</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let reg of registrations">
+        <td>{{ reg.name }}</td>
+        <td>{{ reg.regNo }}</td>
+        <td>{{ reg.department }}</td>
+        <td>{{ reg.event }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm me-2"
+                  (click)="edit(reg)">
+            Edit
+          </button>
+
+          <button class="btn btn-danger btn-sm"
+                  (click)="delete(reg.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
